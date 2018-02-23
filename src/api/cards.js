@@ -4,7 +4,9 @@ export default {
   getCards: function () {
     return CardsResource.get()
     .then(response => {
-      return response
+      console.log('get')
+      console.log(response)
+      return 5
     })
     .catch(error => {
       console.error(error)

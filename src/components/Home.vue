@@ -7,7 +7,9 @@
 
 <script>
 import Card from '@/components/Card'
-// import getCards from '../api/cards'
+import getCards from '../api/cards'
+
+console.log(getCards)
 
 export default {
   name: 'home',
@@ -17,31 +19,34 @@ export default {
   data () {
     return {
       msg: 'Home page',
-      cards: [
-        {
-          'artikel': '',
-          'word': 'buchstabieren',
-          'plural': '',
-          'translation': 'читать по складам; произносить по буквам',
-          'description': ''
-        },
-        {
-          'artikel': '',
-          'word': 'leben',
-          'plural': '',
-          'translation': 'жить; существовать',
-          'description': '▶ wie die Leute leben!— живут же люди!▶ man lebt nur einmal!— живёшь только раз!▶ sein eigenes Leben leben— жить своей жизнью'
-        },
-        {
-          'artikel': '',
-          'word': 'lesen',
-          'plural': '',
-          'translation': 'читать',
-          'description': '▶ laut lesen— читать вслух▶ das Buch liest sich gut— книга легко читается▶ sich müde lesen— устать от чтения'
-        }
-      ]
-      // JSON.parse(getCards)
+      // cards: [
+      //   {
+      //     'artikel': '',
+      //     'word': 'buchstabieren',
+      //     'plural': '',
+      //     'translation': 'читать по складам; произносить по буквам',
+      //     'description': ''
+      //   },
+      //   {
+      //     'artikel': '',
+      //     'word': 'leben',
+      //     'plural': '',
+      //     'translation': 'жить; существовать',
+      //     'description': '▶ wie die Leute leben!— живут же люди!▶ man lebt nur einmal!— живёшь только раз!▶ sein eigenes Leben leben— жить своей жизнью'
+      //   },
+      //   {
+      //     'artikel': '',
+      //     'word': 'lesen',
+      //     'plural': '',
+      //     'translation': 'читать',
+      //     'description': '▶ laut lesen— читать вслух▶ das Buch liest sich gut— книга легко читается▶ sich müde lesen— устать от чтения'
+      //   }
+      // ]
+      cards: JSON.parse(getCards)
     }
+  },
+  getNewCards () {
+    console.log(getCards)
   }
 }
 </script>
